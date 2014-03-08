@@ -85,7 +85,7 @@ public class questionWithCheckButtons extends LinearLayout {
 		
 		for (int i = 0; i < checkButtonQuestions.size(); i++) {
 			cb[i] = new CheckBox(context);
-			cb[i].setText("this is checkBox" + i, BufferType.SPANNABLE);
+			cb[i].setText(checkButtonQuestions.get(i), BufferType.SPANNABLE);
 			
 			Spannable s = (Spannable) cb[i].getText();
 			ForegroundColorSpan fcs = new ForegroundColorSpan(Color.BLACK);

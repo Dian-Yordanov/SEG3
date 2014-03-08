@@ -25,9 +25,8 @@ public class SurveyActivity extends Activity {
 	
 	public void setQuestions() {
 		jsonReader jr = new jsonReader();
-		Log.v("",""+jsonReader.questionType.size());
 		for (int i = 0; i < jsonReader.questionType.size(); i++) {
-			Log.v("",""+jsonReader.questionType.get(i));
+			Log.v("",jsonReader.questionAnswer.get(i).toString());
 			
 			if (jsonReader.questionType.get(i).equals("text view")) {
 				setQuestionWithOpenTextView(jsonReader.questionText.get(i));
