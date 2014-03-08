@@ -86,7 +86,7 @@ public class questionWithRadioButtons extends LinearLayout {
 		
 		for (int i = 0; i < radioButtonQuestions.size(); i++) {
 			rb[i] = new RadioButton(context);
-			rb[i].setText("this is radioButton" + i, BufferType.SPANNABLE);
+			rb[i].setText(radioButtonQuestions.get(i), BufferType.SPANNABLE);
 			
 			Spannable s = (Spannable) rb[i].getText();
 			ForegroundColorSpan fcs = new ForegroundColorSpan(Color.BLACK);
