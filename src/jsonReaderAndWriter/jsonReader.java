@@ -21,12 +21,12 @@ import android.util.Log;
 
 public class jsonReader {
 
-	public static ArrayList questionType = new ArrayList();
-	public static ArrayList questionText = new ArrayList();
-	public static ArrayList questionAnswer = new ArrayList();
-	
+	public static ArrayList<String> questionType = new ArrayList<String>();
+	public static ArrayList<String> questionText = new ArrayList<String>();
+	public static ArrayList<ArrayList<String>> questionAnswer = new ArrayList<ArrayList<String>>();
+
 	public static String jsonString = "{\"question number 2\":{\"answerText\":[\"your mother\",\"your father\",\"your uncle\",\"your aunt\"],\"questionText\":\"which memebers of your family have heart problems?\",\"questionType\":\"check boxes\"},\"question number 1\":{\"answerText\":[\"yes\",\"no\"],\"questionText\":\"do you have some problems with your hearth?\",\"questionType\":\"radio button\"}}";
-	
+
 	public jsonReader() {
 		jsonObjectExtractor(jsonFileReader());
 	}
@@ -36,32 +36,17 @@ public class jsonReader {
 		Object objToBeParsedFromFile = null;
 		JSONObject jsonObjectFromObj = null;
 
-		
-		
 		try {
 			objToBeParsedFromFile = parser.parse(jsonString);
-			 jsonObjectFromObj = (JSONObject) objToBeParsedFromFile;
+			jsonObjectFromObj = (JSONObject) objToBeParsedFromFile;
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 
-		// try {
-		// objToBeParsedFromFile = parser.parse();
-		// // new FileReader("C:\\Users\\Xelnect\\Desktop\\JSonWritten.json"));
-		//
-		// jsonObjectFromObj = (JSONObject) objToBeParsedFromFile;
-		// } catch (FileNotFoundException e) {
-		// e.printStackTrace();
-		// } catch (IOException e) {
-		// e.printStackTrace();
-		// } catch (ParseException e) {
-		// e.printStackTrace();
-		// }
 		return jsonObjectFromObj;
 	}
 
-	public static void jsonObjectExtractor(
-			JSONObject objToBeParsedFromFile) {
+	public static void jsonObjectExtractor(JSONObject objToBeParsedFromFile) {
 
 		JSONObject questionNumber = null;
 		for (int i = 0; i < objToBeParsedFromFile.size(); i++) {
@@ -70,18 +55,18 @@ public class jsonReader {
 
 			questionNumber = (JSONObject) objToBeParsedFromFile
 					.get(questionNumberIndex);
-					
-			questionType.add(readAnswerText(questionNumber));
-			questionText.add(readQuestionText(questionNumber));		
-			questionAnswer.add(readQuestionType(questionNumber));
-						
+
+			questionAnswer.add(readAnswerText(questionNumber));
+			questionText.add(readQuestionText(questionNumber));
+			questionType.add(readQuestionType(questionNumber));
+
 		}
 
 	}
 
-	public static ArrayList readAnswerText(JSONObject obj) {
+	public static ArrayList<String> readAnswerText(JSONObject obj) {
 		JSONArray answerTextJsonArray = (JSONArray) obj.get("answerText");
-		ArrayList answerTextArray = new ArrayList();
+		ArrayList<String> answerTextArray = new ArrayList();
 		Iterator<String> iterator = answerTextJsonArray.iterator();
 		while (iterator.hasNext()) {
 			answerTextArray.add(iterator.next());
