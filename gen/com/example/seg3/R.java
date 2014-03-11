@@ -40,7 +40,6 @@ public final class R {
         public static final int LinearLayoutForInflationWA=0x7f08001e;
         public static final int action_settings=0x7f08001f;
         public static final int button1=0x7f080018;
-        public static final int dialogDOB=0x7f080009;
         public static final int dialogName=0x7f080007;
         public static final int editText1=0x7f080019;
         public static final int editText2=0x7f08001b;
@@ -50,6 +49,7 @@ public final class R {
         public static final int linearLayoutForInflationSpinner=0x7f080014;
         public static final int mak=0x7f080008;
         public static final int radioGroup1=0x7f08000d;
+        public static final int scanButton=0x7f080009;
         public static final int seekBarForInflation=0x7f080012;
         public static final int spinnerForInflation=0x7f080016;
         public static final int textView=0x7f080002;

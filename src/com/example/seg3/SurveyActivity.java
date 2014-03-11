@@ -18,6 +18,11 @@ public class SurveyActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//Server sr = new Server();
+		
+		
+		
 		setContentView(R.layout.questionary_layout);
 		mainLayout = (LinearLayout) findViewById(R.id.LinearLayout1);
 		setQuestions();
