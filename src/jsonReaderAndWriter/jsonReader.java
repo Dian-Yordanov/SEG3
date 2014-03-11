@@ -25,7 +25,7 @@ public class jsonReader {
 	public static ArrayList<String> questionText = new ArrayList<String>();
 	public static ArrayList<ArrayList<String>> questionAnswer = new ArrayList<ArrayList<String>>();
 
-	public static String jsonString = "{\"question number 2\":{\"answerText\":[\"your mother\",\"your father\",\"your uncle\",\"your aunt\"],\"questionText\":\"which memebers of your family have heart problems?\",\"questionType\":\"check boxes\"},\"question number 1\":{\"answerText\":[\"yes\",\"no\"],\"questionText\":\"do you have some problems with your hearth?\",\"questionType\":\"radio button\"}}";
+	public static String jsonString = "{\"question number 6\":{\"answerText\":[\"Fine\",\"Good\",\"Not Bad\",\"Bad\"],\"questionText\":\"Is Frona leaving?\",\"questionType\":\"check boxes\"},\"question number 5\":{\"answerText\":[\"Fine\",\"Good\",\"Not Bad\",\"Bad\"],\"questionText\":\"How is your girlfriend doing?\",\"questionType\":\"check boxes\"},\"question number 4\":{\"answerText\":[\"RB,Fuck off\",\"Good\",\"Not Bad\",\"Bad\"],\"questionText\":\"How is your mom doing?\",\"questionType\":\"radio button\"},\"question number 3\":{\"answerText\":[\"I'm screwed\",\"Good\",\"Not Bad%Bad\"],\"questionText\":\"How are you doing?,\",\"questionType\":\"radio button\"},\"question number 2\":{\"answerText\":[\"Fine\",\"Good\",\"Not Bad\",\"Bad\"],\"questionText\":\"Is everything ok?\",\"questionType\":\"check boxes\"},\"question number 1\":{\"answerText\":[\"Fine\",\"Good\",\"Not Bad\",\"Bad\"],\"questionText\":\"How are you doing?\",\"questionType\":\"radio button\"}}";
 
 	public jsonReader() {
 		jsonObjectExtractor(jsonFileReader());
