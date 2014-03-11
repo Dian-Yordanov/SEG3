@@ -45,11 +45,11 @@ public final class R {
         public static final int editText2=0x7f08001b;
         public static final int editText3=0x7f08001d;
         public static final int editTextForInflation=0x7f08000f;
+        public static final int gotoSurvey=0x7f080009;
         public static final int item=0x7f080005;
         public static final int linearLayoutForInflationSpinner=0x7f080014;
-        public static final int mak=0x7f080008;
         public static final int radioGroup1=0x7f08000d;
-        public static final int scanButton=0x7f080009;
+        public static final int scanButton=0x7f080008;
         public static final int seekBarForInflation=0x7f080012;
         public static final int spinnerForInflation=0x7f080016;
         public static final int textView=0x7f080002;
@@ -113,5 +113,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int Theme_CustomDialog=0x7f060002;
     }
 }

@@ -21,19 +21,18 @@
         <requestFocus />
     </EditText>
 
-    <TextView
-        android:id="@+id/mak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DOB:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <Button
         android:id="@+id/scanButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-                android:text="Scan"
-                 android:onClick="GoToScan"
-/>
+        android:onClick="GoToScan"
+        android:text="Scan" />
+
+    <Button
+        android:id="@+id/gotoSurvey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="gotoSurvey"
+        android:text="OK" />
 
 </LinearLayout>

@@ -20,54 +20,27 @@ import android.widget.EditText;
 
 public class DialogBox extends Activity{
 	public static String scannedID;
+	EditText name;
+	Button scan;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_dialog);
-		final EditText name = (EditText) findViewById(R.id.dialogName);
-		final Button scan = (Button) findViewById(R.id.scanButton);
+		name = (EditText) findViewById(R.id.dialogName);
+		scan = (Button) findViewById(R.id.scanButton);
 		
-		/*
-		dialogBuilder.setNegativeButton("Cancel",
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
-						// if this button is clicked, just close
-						// the dialog box and do nothing
-						dialog.dismiss();
-					}
-				});
-		dialogBuilder.setPositiveButton("OK",
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
-						// if this button is clicked, open survey of the
-						// patient
-
-						Intent i = new Intent(getActivity(),
-								SurveyActivity.class);
-						i.putExtra("Hospital Number", name.getText().toString());
-						//dialog.dismiss();
-						
-						Server sr = new Server(name.getText().toString());
-						sr.start();
-						Log.v("",Server.hospitalId);
-						
-						//startActivity(i);
-						
-						
-					}
-				});
-
-	*/
-		
-		
-	
-
 	}
 	
 	
 	 public void GoToScan(View view) {
 			IntentIntegrator barcodeScanner = new IntentIntegrator(this);
 			barcodeScanner.initiateScan(IntentIntegrator.TARGET_BARCODE_SCANNER_ONLY);
+}
+	 public void gotoSurvey(View view) {
+			Intent i = new Intent(DialogBox.this, SurveyActivity.class);
+			startActivity(i);
 }
 
 @Override
