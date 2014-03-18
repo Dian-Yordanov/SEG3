@@ -10,6 +10,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.util.Log;
@@ -22,7 +23,7 @@ public class DialogBox extends Activity{
 	public static String scannedID;
 	EditText name;
 	Button scan;
-	
+	SharedPreferences sharedPref ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class DialogBox extends Activity{
 		setContentView(R.layout.fragment_dialog);
 		name = (EditText) findViewById(R.id.dialogName);
 		scan = (Button) findViewById(R.id.scanButton);
-		
+		sharedPref = MainActivity.getSharedPreferences();
 	}
 	
 	

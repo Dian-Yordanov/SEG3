@@ -7,8 +7,10 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -25,6 +27,7 @@ public class MainActivity extends FragmentActivity {
 	Button withoutAppointment;
 	public static String scannedID;
 	LinearLayout layoutForCentering;
+	static SharedPreferences sharedPref ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,7 @@ public class MainActivity extends FragmentActivity {
 		setContentView(R.layout.activity_main);
 		withAppointment = (Button) findViewById(R.id.withAppointment);
 		withoutAppointment = (Button) findViewById(R.id.withoutAppointment);
-	
+		sharedPref = getPreferences(Context.MODE_PRIVATE);
 
 	}
 	
@@ -157,5 +160,15 @@ public class MainActivity extends FragmentActivity {
 			     }
 			  }
 		}
+	}
+	public static SharedPreferences getSharedPreferences(){
+		return sharedPref;
+	}
+	public static String getIP(){
+	
+		
+		System.out.println(sharedPref.getString("ip", "not assigned yet"));
+		return sharedPref.getString("ip", "not assigned yet");
+		
 	}
 }
